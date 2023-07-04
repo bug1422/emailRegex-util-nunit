@@ -68,7 +68,7 @@ jobs:
       run: dotnet restore TestProject.csproj
       
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build TestProject.csproj --configuration Release --no-restore
     
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test TestProject.csproj --no-restore --verbosity normal
