@@ -9,19 +9,20 @@ namespace Main.src.test.org.bug1422.emailRegex.nunit.core
         public void Setup()
         {
         }
+        [Test]
         public void Test1()
         {
-            Assert.AreEqual(true, isValid("abc@gmail.com"));
+            Assert.That(isValid("abc@gmail.com"), Is.EqualTo(true));
         }
         [Test]
         public void Test2()
         {
-            Assert.AreEqual(true, isValid("abc@fpt.edu.vn"));
+            Assert.That(isValid("abc@fpt.edu.vn"), Is.EqualTo(true));
         }
         [Test]
         public void Test3()
         {
-            Assert.AreEqual(false, isValid("abcd"));
+            Assert.That(isValid("abcd"), Is.EqualTo(false));
         }
     }
 }
